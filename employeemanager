@@ -1,0 +1,81 @@
+package Nitin;
+
+import java.util.ArrayList;
+
+public class EmployManager1 {
+
+	static ArrayList<Employee> eList= new ArrayList<Employee>();
+	public static void main(String[] args) {
+		}
+	
+	//Method to add employee
+		public boolean addEmployee(Employee e){
+			boolean flag=true;
+			for(Employee emp:eList) {
+				if(emp.getEmpid()==e.getEmpid()) {
+					flag=false;
+					break;
+				}
+				
+			}
+			if (flag)
+				eList.add(e);
+			return flag;
+		}
+//Method to update employee
+		public boolean updateEmployee(Employee e1){
+			boolean flag=true;
+			Employee e = null;
+			for(Employee emp:eList){
+				if(e1.getEmpid()==emp.getEmpid()){
+					flag=false;
+					break;
+				}
+			}
+			if(flag)
+				eList.set(0, e);
+			return flag;
+		}
+		//Remove employee
+		public boolean removeEmployee(int id){
+			boolean flag=false;
+			for(Employee emp:eList){
+				if(emp.getEmpid()==id) {
+					eList.remove(emp);
+					flag=true;
+					break;
+				}
+			}
+				
+			return flag;
+		}
+		//Method to print list of employees of age>22
+		public void AgeList(int age1){
+			System.out.println("list of employees greater than "+age1);
+			
+			for(Employee emp:eList){
+				if(emp.getAge()>age1){
+				System.out.println(emp.getEmpid() + " " + emp.getName() + " " + emp.getAge());
+				}
+				
+			}
+			//return AgeList1;
+			
+			
+			
+			
+		}
+
+public void Agedo()
+{
+System.out.println("Required ages are");
+for(Employee emp:eList)
+{
+if (emp.getAge()>20 && emp.getAge()<40)
+	System.out.println(emp.getAge());
+
+}
+}
+	}
+
+
