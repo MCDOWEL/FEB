@@ -1,0 +1,36 @@
+package Nitin;
+
+public class test1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee e1= new Employee(5,25,5000,"Nitin");
+		Employee e2= new Employee(6,22,5000,"Bipin");
+		Employee e3= new Employee(7,26,6000,"Priya");
+		Employee e4= new Employee(8,20,7000,"Jyoti");
+		Employee e5= new Employee(7,20,7000,"pispa");
+		
+		EmployManager1 obj=new EmployManager1();
+		boolean a1= obj.addEmployee(e1);
+		boolean a2=obj.addEmployee(e2);
+		boolean a3=obj.addEmployee(e3);
+		boolean a4=obj.addEmployee(e4);
+		boolean a5=obj.addEmployee(e5);
+		//boolean r1=obj.removeEmployee(6);
+		//boolean r2=obj.removeEmployee(5);
+	
+		
+		for(Employee emp:obj.eList){
+			System.out.println(emp.getEmpid() + " " + emp.getName() + " " + emp.getAge());
+		
+		 }
+		obj.AgeList(22);
+		obj.Agedo();
+		
+		
+   }
+}
+		
+
+
